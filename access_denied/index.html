@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+  @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|Montserrat:700");
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: inherit;
+  }
+
+  body {
+    background-image: radial-gradient( black 40%, #000954 99%);
+    height: 100vh;
+  }
+
+  div {
+    background: rgba(0, 0, 0, 0);
+    width: 70vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding: 30px 30px 10px;
+    box-shadow: 0 0 150px -20px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+
+  P {
+    font-family: "Share Tech Mono", monospace;
+    color: #f5f5f5;
+    margin: 0 0 20px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  span {
+    color: #F0DA00;
+  }
+
+  i {
+    color: #36FE00;
+  }
+
+  div a {
+    text-decoration: none;
+  }
+
+  b {
+    color: #81a2be;
+  }
+
+  a {
+    color: #FF2D00;
+  }
+
+  @keyframes slide {
+    from {
+        right: -100px;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    to {
+        right: 15px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+  }
+
+  </style>
+  <title></title>
+</head>
+<body>
+  <div>
+    <p><a>Access Unauthorised</a></p>
+    <p>$ <span>Time Of Arrival</span>: "<i>2024-02-22
+    15:46:55</i>"</p>
+    <p>$ <span>IP Address</span>:
+    "<i>2001:41d0:1008:2874::</i>"</p>
+    <p>$ <span>Country</span>: "<i>FR</i>"</p>
+    <p>$ <span>State</span>: "<i>Hauts-de-France</i>"</p>
+    <p>$ <span>City</span>: "<i>Lille</i>"</p>
+    <p>$ <span>Location</span>: "<i>50.6330,3.0586</i>"</p>
+    <p>$ <span>ISP</span>: "<i>ASOVH SAS</i>"</p>
+    <p>$ <span>User Agent</span>: "<i>141.101.68.85</i>"</p>
+    <p>$ <span>Operating System</span>: "<i>Unknown OS
+    Platform</i>"</p>
+    <p>$ <span>Browser</span>: "<i>Unknown Browser</i>"</p>
+    <p>$ <span>Device</span>: "<i>Computer</i>"</p>
+    <p>$ <span>Tor Browser</span>: "<i>False</i>"</p>
+    <p>root@admin: ~$ <span>Log Session</span>:
+    "<i>Success</i>"</p>
+  </div>
+  <script>
+  var str = document.getElementsByTagName('div')[0].innerHTML.toString();
+  var i = 0;
+  document.getElementsByTagName('div')[0].innerHTML = "";
+
+  setTimeout(function() {
+    var se = setInterval(function() {
+        i++;
+        document.getElementsByTagName('div')[0].innerHTML = str.slice(0, i) + "|";
+        if (i == str.length) {
+            clearInterval(se);
+            document.getElementsByTagName('div')[0].innerHTML = str;
+        }
+    }, 10);
+  },0);
+
+  </script>
+</body>
+</html>
